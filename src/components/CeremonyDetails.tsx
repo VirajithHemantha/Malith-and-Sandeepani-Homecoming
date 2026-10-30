@@ -19,18 +19,18 @@ export const CeremonyDetails: React.FC = () => {
           >
             <div className="inline-flex items-center gap-4 mb-6">
               <span className="text-brand-mocha uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[10px] sm:text-[11px] font-bold drop-shadow-sm">
-                The Sacred Union
+                The Homecoming
               </span>
               <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-brand-mocha/60 to-transparent" />
             </div>
             
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display text-brand-mocha mb-8 leading-[1.1] drop-shadow-sm">
-              A Celebration of <br />
-              <span className="italic font-light text-brand-mocha">Tradition & Love</span>
+              Welcoming Us <br />
+              <span className="italic font-light text-brand-gold">Home Together</span>
             </h2>
             
-            <p className="text-brand-sand/90 font-serif text-lg sm:text-xl leading-relaxed mb-16 max-w-lg">
-              We are honored to invite you to witness our union as we exchange vows at St. Mary's Cathedral, surrounded by the grace of God and the warmth of our loved ones.
+            <p className="text-brand-sand/90 font-serif text-lg sm:text-xl leading-relaxed mb-8 max-w-lg">
+              With hearts full of joy, we warmly invite you to celebrate our homecoming with us. Your blessings and presence will make this beautiful new beginning truly complete.
             </p>
 
             {/* Premium Timeline */}
@@ -38,34 +38,34 @@ export const CeremonyDetails: React.FC = () => {
               
               {/* Calendar */}
               <div className="relative group">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-gold/40 shadow-lg flex items-center justify-center group-hover:border-brand-mocha group-hover:shadow-[0_4px_15px_rgba(197,160,89,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-gold/40 shadow-lg flex items-center justify-center group-hover:border-brand-mocha group-hover:shadow-[0_4px_15px_rgba(193,18,31,0.3)] transition-all duration-500">
                   <Calendar className="w-5 h-5 text-brand-mocha group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-brand-mocha mb-2 group-hover:text-brand-mocha transition-colors duration-500">Monday, March 22</h4>
-                  <p className="text-brand-sand/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">The Year Two Thousand Twenty Seven</p>
+                  <h4 className="font-serif text-2xl sm:text-3xl text-brand-mocha mb-2 group-hover:text-brand-mocha transition-colors duration-500">Sunday, December 13</h4>
+                  <p className="text-brand-sand/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">The Year Two Thousand Twenty Six</p>
                 </div>
               </div>
 
               {/* Clock */}
               <div className="relative group">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-gold/40 shadow-lg flex items-center justify-center group-hover:border-brand-mocha group-hover:shadow-[0_4px_15px_rgba(197,160,89,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-gold/40 shadow-lg flex items-center justify-center group-hover:border-brand-mocha group-hover:shadow-[0_4px_15px_rgba(193,18,31,0.3)] transition-all duration-500">
                   <Clock className="w-5 h-5 text-brand-mocha group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-brand-mocha mb-2 group-hover:text-brand-mocha transition-colors duration-500">03:30 PM</h4>
-                  <p className="text-brand-sand/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Wedding Ceremony — St. Mary's Cathedral, Colombo</p>
+                  <h4 className="font-serif text-2xl sm:text-3xl text-brand-mocha mb-2 group-hover:text-brand-mocha transition-colors duration-500">10:00 AM</h4>
+                  <p className="text-brand-sand/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Homecoming Celebration Begins</p>
                 </div>
               </div>
 
               {/* Location */}
               <div className="relative group">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-gold/40 shadow-lg flex items-center justify-center group-hover:border-brand-mocha group-hover:shadow-[0_4px_15px_rgba(197,160,89,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-gold/40 shadow-lg flex items-center justify-center group-hover:border-brand-mocha group-hover:shadow-[0_4px_15px_rgba(193,18,31,0.3)] transition-all duration-500">
                   <MapPin className="w-5 h-5 text-brand-mocha group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-brand-mocha mb-2 group-hover:text-brand-mocha transition-colors duration-500">ITC Rathnadeepa</h4>
-                  <p className="text-brand-sand/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Colombo</p>
+                  <h4 className="font-serif text-2xl sm:text-3xl text-brand-mocha mb-2 group-hover:text-brand-mocha transition-colors duration-500">Devon Hotel</h4>
+                  <p className="text-brand-sand/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Ampitiya Road</p>
                 </div>
               </div>
             </div>
@@ -86,9 +86,9 @@ export const CeremonyDetails: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-champagne/40 arch-shape blur-2xl -z-20" />
 
             {/* Main Creative Image Frame */}
-            <div className="relative aspect-[3/4] sm:aspect-[4/5] arch-shape overflow-hidden border-[6px] sm:border-[8px] border-white shadow-[0_20px_50px_rgba(197,160,89,0.2)] bg-white group">
+            <div className="relative aspect-[3/4] sm:aspect-[4/5] arch-shape overflow-hidden border-[6px] sm:border-[8px] border-white shadow-[0_20px_50px_rgba(193,18,31,0.2)] bg-white group">
               <img
-                src="/images/c.jpg"
+                src="/z.jpg"
                 onError={(e) => { 
                   e.currentTarget.src = "https://images.unsplash.com/photo-1519225421980-715cb02151ff?auto=format&fit=crop&q=80&w=800&h=1000"; 
                   e.currentTarget.onerror = null; 
@@ -110,7 +110,7 @@ export const CeremonyDetails: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-            className="mt-10 sm:mt-14 bg-white/85 backdrop-blur-xl p-6 sm:p-10 shadow-[0_30px_60px_rgba(197,160,89,0.15)] rounded-2xl border border-white relative overflow-hidden"
+            className="mt-10 sm:mt-14 bg-white/85 backdrop-blur-xl p-6 sm:p-10 shadow-[0_30px_60px_rgba(193,18,31,0.15)] rounded-2xl border border-white relative overflow-hidden"
           >
             <div className="absolute inset-x-8 -top-px h-[2px] bg-gradient-to-r from-transparent via-brand-mocha/60 to-transparent" />
             <div className="relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
@@ -119,13 +119,13 @@ export const CeremonyDetails: React.FC = () => {
                 <Sparkles className="w-4 h-4 text-brand-gold animate-pulse flex-shrink-0" />
               </div>
               <div className="flex-1">
-                <h4 className="font-display text-2xl sm:text-4xl text-brand-mocha mb-1 sm:mb-2 tracking-tight">The Reception</h4>
+                <h4 className="font-display text-2xl sm:text-4xl text-brand-mocha mb-1 sm:mb-2 tracking-tight">Lunch Buffet</h4>
                 <p className="text-brand-sand/90 font-serif text-sm sm:text-base leading-relaxed">
-                  Followed by a grand celebratory dinner and evening festivities at ITC Rathnadeepa.
+                  Join us for a delightful lunch buffet and an afternoon of celebration at Devon Hotel.
                 </p>
               </div>
               <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-brand-champagne rounded-full border border-brand-gold/30 shadow-sm self-start sm:self-center flex-shrink-0">
-                <span className="text-brand-mocha font-sans font-bold tracking-[0.1em] sm:tracking-[0.2em] text-[9px] sm:text-[11px] uppercase block drop-shadow-sm">7:00 PM Onwards</span>
+                <span className="text-brand-mocha font-sans font-bold tracking-[0.1em] sm:tracking-[0.2em] text-[9px] sm:text-[11px] uppercase block drop-shadow-sm">12:30 PM Onwards</span>
               </div>
             </div>
           </motion.div>

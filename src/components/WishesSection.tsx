@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Send, Loader2, Sparkles } from 'lucide-react';
+import { toast } from 'sonner';
+import { fetchWishes, submitWish } from '../lib/googleSheets';
 
 interface Wish {
   id: string;
@@ -24,14 +26,29 @@ export const WishesSection: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Load previously shared wishes from the Google Sheet
+  useEffect(() => {
+    fetchWishes()
+      .then((rows) =>
+        setWishes(
+          rows.map((row, i) => ({
+            id: `sheet-${i}`,
+            name: row.name,
+            message: row.message,
+            createdAt: row.createdAt ? new Date(row.createdAt) : new Date(),
+          }))
+        )
+      )
+      .catch((error) => console.error('Error loading wishes: ', error));
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.message) return;
     setIsSubmitting(true);
 
     try {
-      // Simulate network request latency
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await submitWish({ name: formData.name, message: formData.message });
 
       const newWish: Wish = {
         id: Date.now().toString(),
@@ -45,6 +62,7 @@ export const WishesSection: React.FC = () => {
       setFormData({ name: '', message: '' });
     } catch (error) {
       console.error('Error submitting wish: ', error);
+      toast.error(error instanceof Error ? error.message : 'Could not share your blessing. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -61,7 +79,7 @@ export const WishesSection: React.FC = () => {
           Guestbook
         </span>
         <h2 className="text-5xl sm:text-7xl font-display text-brand-mocha tracking-tight drop-shadow-sm">
-          Blessings & <span className="italic font-light text-brand-mocha">Wishes</span>
+          Blessings & <span className="italic font-light text-brand-gold">Wishes</span>
         </h2>
         <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-brand-gold/60 to-transparent mx-auto mt-8" />
       </div>
@@ -74,7 +92,7 @@ export const WishesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full glass p-8 sm:p-14 rounded-[3rem] border border-white/60 shadow-[0_30px_60px_rgba(197,160,89,0.1)] relative overflow-hidden bg-white/70 backdrop-blur-3xl mb-16"
+          className="w-full glass p-8 sm:p-14 rounded-[3rem] border border-brand-gold/30 shadow-[0_30px_60px_rgba(193,18,31,0.1)] relative overflow-hidden bg-white/70 backdrop-blur-3xl mb-16"
         >
           {/* Subtle top reflection line */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-50" />
@@ -93,7 +111,7 @@ export const WishesSection: React.FC = () => {
                   required
                   type="text"
                   placeholder="E.g., Uncle John"
-                  className="w-full bg-white/80 px-6 py-4 rounded-full border border-stone-200/60 focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-mocha/40 outline-none transition-all duration-300 font-serif italic text-lg shadow-inner placeholder:text-stone-300 text-brand-mocha"
+                  className="w-full bg-white/80 px-6 py-4 rounded-full border border-brand-gold/30 focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-mocha/40 outline-none transition-all duration-300 font-serif italic text-lg shadow-inner placeholder:text-brand-sand/40 text-brand-mocha"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
@@ -104,7 +122,7 @@ export const WishesSection: React.FC = () => {
                 <textarea
                   required
                   placeholder="Wishing you a lifetime of happiness..."
-                  className="w-full bg-white/80 px-6 py-5 rounded-[2rem] border border-stone-200/60 focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-mocha/40 outline-none transition-all duration-300 h-36 resize-none font-serif italic text-lg shadow-inner placeholder:text-stone-300 text-brand-mocha"
+                  className="w-full bg-white/80 px-6 py-5 rounded-[2rem] border border-brand-gold/30 focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-mocha/40 outline-none transition-all duration-300 h-36 resize-none font-serif italic text-lg shadow-inner placeholder:text-brand-sand/40 text-brand-mocha"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
@@ -115,7 +133,7 @@ export const WishesSection: React.FC = () => {
               <button
                 disabled={isSubmitting}
                 type="submit"
-                className="w-full bg-brand-mocha text-brand-champagne py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-brand-mocha transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
+                className="w-full bg-brand-black text-white border border-brand-black py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-brand-gold hover:border-brand-gold transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
@@ -144,7 +162,7 @@ export const WishesSection: React.FC = () => {
                 <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-brand-mocha/20 to-brand-gold/40 group-hover:from-brand-mocha group-hover:to-brand-gold transition-all duration-500" />
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
                   <h4 className="font-display text-2xl text-brand-mocha tracking-tight pl-2">{wish.name}</h4>
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-brand-sand font-bold bg-white/60 px-3 py-1 rounded-full border border-stone-100/50">
+                  <span className="text-[9px] uppercase tracking-[0.2em] text-brand-sand font-bold bg-white/60 px-3 py-1 rounded-full border border-brand-gold/30">
                     {wish.createdAt ? getRelativeTime(wish.createdAt) : 'just now'}
                   </span>
                 </div>

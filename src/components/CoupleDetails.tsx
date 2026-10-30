@@ -17,11 +17,11 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="inline-flex items-center gap-4 mb-6 mt-4">
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-brand-mocha/60" />
-            <span className="text-brand-mocha uppercase tracking-[0.5em] text-[11px] font-semibold font-sans drop-shadow-sm">The Protagonists</span>
+            <span className="text-brand-mocha uppercase tracking-[0.5em] text-[11px] font-semibold font-sans drop-shadow-sm">The Couple</span>
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-brand-mocha/60" />
           </div>
           <h2 className="text-5xl sm:text-7xl font-display text-brand-mocha tracking-tight drop-shadow-sm">
-            Eleanor <span className="italic text-brand-mocha font-light mx-2">&</span> Alexander
+            <span className="text-red-foil">Malith</span> <span className="italic text-brand-gold font-light mx-2">&</span> <span className="text-red-foil">Nipunika</span>
           </h2>
         </motion.div>
       </div>
@@ -37,8 +37,8 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-end">
             <span className="text-brand-mocha uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom</span>
-            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2 drop-shadow-sm">Alexander</h3>
-            <p className="text-brand-sand/90 font-serif italic text-base sm:text-lg">Son of Mr. Robert Sterling<br />& Mrs. Margaret Sterling</p>
+            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2 drop-shadow-sm">Malith</h3>
+            <p className="text-brand-sand/90 font-serif italic text-base sm:text-lg">Son of Mr. T. H. G. Dayananda<br />& Mrs. Nalani Vithanage</p>
           </div>
           <div className="hidden lg:flex justify-end mt-8">
             <Heart className="w-6 h-6 text-brand-gold/60 fill-brand-gold/20 transform hover:scale-110 transition-transform cursor-pointer" />
@@ -54,21 +54,21 @@ export const CoupleDetails: React.FC = () => {
           className="relative px-4 sm:px-0 order-1 lg:order-2 flex-shrink-0 group"
         >
           {/* Glowing border effect */}
-          <div className="absolute -inset-2 bg-gradient-to-b from-brand-mocha/30 to-transparent rounded-[12rem_12rem_1rem_1rem] blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          <div className="absolute -inset-2 bg-gradient-to-b from-brand-gold/25 to-transparent rounded-[12rem_12rem_1rem_1rem] blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-          <div className="relative w-[300px] h-[400px] sm:w-[360px] sm:h-[500px] lg:w-[420px] lg:h-[580px] rounded-[12rem_12rem_16px_16px] overflow-hidden border-[6px] border-white/90 shadow-[0_20px_50px_rgba(197,160,89,0.2)] bg-brand-champagne mx-auto z-10 transition-transform duration-700 group-hover:-translate-y-2">
+          <div className="relative w-[300px] h-[400px] sm:w-[360px] sm:h-[500px] lg:w-[420px] lg:h-[580px] rounded-[12rem_12rem_16px_16px] overflow-hidden border-[6px] border-white ring-1 ring-brand-gold/40 shadow-[0_20px_50px_rgba(193,18,31,0.2)] bg-brand-champagne mx-auto z-10 transition-transform duration-700 group-hover:-translate-y-2">
             <img
-              src="/images/b.jpg"
+              src="/y.jpg"
               onError={(e) => {
                 e.currentTarget.src = "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800&h=1000";
                 e.currentTarget.onerror = null;
               }}
-              alt="Samadhi and Madhawa"
+              alt="Malith and Nipunika"
               className="w-full h-full object-cover scale-[1.2] lg:scale-[1.15] object-[center_30%] transition-transform duration-[1.5s] ease-out group-hover:scale-[1.25] lg:group-hover:scale-[1.2]"
             />
             {/* Elegant inner shadow & overlay */}
             <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none" />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-mocha/30 to-transparent pointer-events-none mix-blend-overlay" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-crimson/20 to-transparent pointer-events-none mix-blend-overlay" />
           </div>
 
           {/* Floating Sparkles decoration */}
@@ -91,8 +91,9 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-start">
             <span className="text-brand-mocha uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Bride</span>
-            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2 drop-shadow-sm">Eleanor</h3>
-            <p className="text-brand-sand/90 font-serif italic text-base sm:text-lg">Daughter of Mr. Charles Kensington<br />& Mrs. Victoria Kensington</p>
+            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2 drop-shadow-sm">Nipunika</h3>
+            <p className="text-brand-gold font-display tracking-[0.3em] uppercase text-xs sm:text-sm mb-3">Gunawardhana</p>
+            <p className="text-brand-sand/90 font-serif italic text-base sm:text-lg">Daughter of Mr. Priyantha Gunawardhana<br />& Mrs. Roshini Gunawardhana</p>
           </div>
           <div className="hidden lg:flex justify-start mt-8">
             <Heart className="w-6 h-6 text-brand-gold/60 fill-brand-gold/20 transform hover:scale-110 transition-transform cursor-pointer" />
