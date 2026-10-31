@@ -10,7 +10,7 @@ export const Location: React.FC = () => {
   return (
     <div className="max-w-[85rem] mx-auto px-6 relative py-12">
       {/* Decorative Glows */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-brand-gold/20 to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-brand-gold/[0.06] to-transparent to-70% pointer-events-none -z-10" />
 
       <div className="flex justify-center mt-10">
         
@@ -22,7 +22,7 @@ export const Location: React.FC = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="w-full max-w-2xl z-20"
         >
-          <div className="bg-white/90 backdrop-blur-2xl p-10 sm:p-14 lg:p-16 rounded-[2.5rem] shadow-[0_30px_60px_rgba(193,18,31,0.15)] border border-brand-gold/30 relative overflow-hidden group">
+          <div className="bg-white/90 p-10 sm:p-14 lg:p-16 rounded-[2.5rem] shadow-[0_30px_60px_rgba(193,18,31,0.15)] border border-brand-gold/30 relative overflow-hidden group">
             
             {/* Elegant top border gradient */}
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-black via-brand-gold to-brand-black" />

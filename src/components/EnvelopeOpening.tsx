@@ -27,8 +27,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
         ref={videoRef}
         src="/images/greenopening.mp4"
         className="absolute w-full h-full object-cover transition-opacity duration-1000"
-        // Shift the green intro video toward the red & black palette
-        style={{ opacity: isPlaying ? 1 : 0.3, filter: 'hue-rotate(-140deg) saturate(1.15) brightness(0.9)' }}
+        style={{ opacity: isPlaying ? 1 : 0.3 }}
         playsInline
         preload="auto"
         muted

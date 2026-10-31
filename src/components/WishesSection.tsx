@@ -71,7 +71,7 @@ export const WishesSection: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 relative py-12">
       {/* Background ambient glow */}
-      <div className="absolute top-0 right-1/4 w-3/4 h-3/4 bg-brand-gold/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-0 right-1/4 w-3/4 h-3/4 bg-radial from-brand-gold/[0.06] to-transparent to-70% rounded-full pointer-events-none -z-10" />
 
       <div className="text-center mb-16 relative">
         <Sparkles className="absolute -top-8 left-1/2 -translate-x-1/2 w-8 h-8 text-brand-gold/40 animate-pulse" />
@@ -92,7 +92,7 @@ export const WishesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full glass p-8 sm:p-14 rounded-[3rem] border border-brand-gold/30 shadow-[0_30px_60px_rgba(193,18,31,0.1)] relative overflow-hidden bg-white/70 backdrop-blur-3xl mb-16"
+          className="w-full glass p-8 sm:p-14 rounded-[3rem] border border-brand-gold/30 shadow-[0_30px_60px_rgba(193,18,31,0.1)] relative overflow-hidden bg-white/70 mb-16"
         >
           {/* Subtle top reflection line */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-50" />
@@ -157,7 +157,7 @@ export const WishesSection: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="glass p-8 sm:p-10 rounded-3xl border border-brand-gold/20 shadow-sm relative overflow-hidden group bg-white/50 backdrop-blur-sm"
+                className="glass p-8 sm:p-10 rounded-3xl border border-brand-gold/20 shadow-sm relative overflow-hidden group bg-white/50"
               >
                 <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-brand-mocha/20 to-brand-gold/40 group-hover:from-brand-mocha group-hover:to-brand-gold transition-all duration-500" />
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">

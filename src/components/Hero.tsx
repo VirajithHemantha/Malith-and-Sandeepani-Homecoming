@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { Sparkles, Heart } from 'lucide-react';
 import { FloatingPetals } from './FloatingPetals';
 import { getGuestFromLocation } from '../lib/invite';
+import { Ornament } from './DecorativeDivider';
 
 export const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,8 @@ export const Hero: React.FC = () => {
       >
         <img
           src="/x.jpg"
+          fetchPriority="high"
+          decoding="async"
           alt="Malith and Nipunika"
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center 20%' }}
@@ -80,7 +83,7 @@ export const Hero: React.FC = () => {
           {/* Subtle top decoration */}
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <div className="h-[1px] w-12 sm:w-16 bg-gradient-to-l from-brand-gold/60 to-transparent" />
-            <img src="/ornament.png" alt="" className="w-8 h-8 object-contain opacity-70" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+            <Ornament className="w-8 h-8" />
             <div className="h-[1px] w-12 sm:w-16 bg-gradient-to-r from-brand-gold/60 to-transparent" />
           </div>
 
@@ -90,7 +93,7 @@ export const Hero: React.FC = () => {
 
           <div className="relative mb-8 sm:mb-12 w-full flex justify-center">
             {/* Soft glow behind text for contrast and magical feel */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[140%] bg-white/40 blur-[50px] sm:blur-[80px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[140%] bg-radial from-white/70 via-white/30 to-transparent to-70% rounded-full pointer-events-none" />
 
             <h1 className="relative text-6xl sm:text-[7rem] lg:text-[9.5rem] font-display text-brand-mocha leading-[1.1] sm:leading-[0.9] drop-shadow-sm">
               <span className="text-red-foil">Malith</span> <br className="sm:hidden" />
@@ -121,7 +124,7 @@ export const Hero: React.FC = () => {
           {/* Enhanced Date pill with premium glass effect */}
           <div className="inline-block relative group mt-4 sm:mt-8 w-full sm:w-auto px-4 sm:px-0">
             <div className="absolute -inset-1 bg-gradient-to-r from-brand-gold/40 via-brand-gold-light/40 to-brand-gold/40 rounded-full blur-[8px] opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 transform group-hover:scale-105" />
-            <div className="relative px-4 sm:px-12 py-3 sm:py-5 bg-white/70 backdrop-blur-lg border border-brand-gold/50 rounded-full shadow-[0_8px_30px_rgba(193,18,31,0.15)] overflow-hidden whitespace-nowrap flex items-center justify-center">
+            <div className="relative px-4 sm:px-12 py-3 sm:py-5 bg-white/70 border border-brand-gold/50 rounded-full shadow-[0_8px_30px_rgba(193,18,31,0.15)] overflow-hidden whitespace-nowrap flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-b from-white/60 to-transparent pointer-events-none" />
               <span className="relative text-[16px] sm:text-3xl font-serif text-brand-mocha tracking-[0.2em] sm:tracking-[0.4em] font-medium drop-shadow-sm flex items-center gap-2 sm:gap-3 whitespace-nowrap">
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-gold flex-shrink-0" />

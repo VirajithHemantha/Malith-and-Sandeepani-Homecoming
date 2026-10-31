@@ -23,7 +23,7 @@ export default function App() {
     audioRef.current = new Audio('/song.mp3');
     audioRef.current.loop = true;
     audioRef.current.volume = 0.3;
-    audioRef.current.preload = 'auto';
+    audioRef.current.preload = 'metadata';
 
     return () => {
       if (audioRef.current) {
@@ -132,7 +132,7 @@ export default function App() {
 
       {/* Elegant Footer Signature */}
       <footer className="py-12 bg-brand-black border-t-2 border-brand-gold text-center relative overflow-hidden mt-6">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-gold/10 blur-[80px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-radial from-brand-gold/25 to-transparent to-70% rounded-full pointer-events-none" />
         <Heart className="w-6 h-6 mx-auto mb-6 text-brand-gold-light fill-brand-gold/40" />
         <p className="font-display text-4xl sm:text-5xl mb-2"><span className="text-white">Malith</span> <span className="text-brand-gold-light italic">&</span> <span className="text-white">Nipunika</span></p>
         <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-white/60 font-semibold block mb-8">

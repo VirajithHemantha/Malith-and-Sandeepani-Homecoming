@@ -48,7 +48,7 @@ export const Timeline: React.FC = () => {
 
               {/* Content */}
               <div className={`flex-1 text-center ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                <div className="bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-brand-gold/10 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-white/60 p-6 rounded-2xl border border-brand-gold/10 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <h4 className="text-xl font-display text-brand-mocha mb-2">{event.title}</h4>
                   <p className="text-brand-sand text-sm leading-relaxed font-serif italic">{event.desc}</p>
                 </div>

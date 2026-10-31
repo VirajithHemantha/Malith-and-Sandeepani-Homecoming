@@ -1,12 +1,19 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Clock, Calendar, MapPin, Heart, Sparkles } from 'lucide-react';
+import { Clock, Calendar, MapPin, Heart, Sparkles, CalendarPlus } from 'lucide-react';
+
+const calendarUrl =
+  'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+  `&text=${encodeURIComponent('Malith & Nipunika — Homecoming')}` +
+  '&dates=20261213T100000/20261213T160000&ctz=Asia/Colombo' +
+  `&location=${encodeURIComponent('Devon Hotel, Ampitiya Road')}` +
+  `&details=${encodeURIComponent('10.00 AM Function starts · 12.30 PM Buffet opens · 4.00 PM Wedding send off\nhttps://maps.app.goo.gl/5k8w3bRbheoc6nfL6')}`;
 
 export const CeremonyDetails: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
       {/* Premium ambient backdrop */}
-      <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-gradient-radial from-brand-gold/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-radial from-brand-gold/[0.06] to-transparent to-70% rounded-full pointer-events-none" />
       
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         {/* Left Side: Text Content */}
@@ -69,6 +76,16 @@ export const CeremonyDetails: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            <a
+              href={calendarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 inline-flex items-center gap-3 bg-brand-black text-white px-8 py-4 rounded-full font-sans tracking-[0.2em] text-[11px] font-bold uppercase border border-brand-black hover:bg-brand-gold hover:border-brand-gold transition-colors duration-300 shadow-[0_10px_25px_rgba(20,17,17,0.15)]"
+            >
+              <CalendarPlus className="w-4 h-4" />
+              Add to Calendar
+            </a>
           </motion.div>
         </div>
 
@@ -83,12 +100,14 @@ export const CeremonyDetails: React.FC = () => {
           >
             {/* Artistic Background Frame */}
             <div className="absolute -inset-4 sm:-inset-6 border-[2px] border-brand-gold/30 arch-shape -z-10 translate-x-4 sm:translate-x-8 translate-y-4 sm:translate-y-8" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-champagne/40 arch-shape blur-2xl -z-20" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-champagne/40 arch-shape -z-20" />
 
             {/* Main Creative Image Frame */}
             <div className="relative aspect-[3/4] sm:aspect-[4/5] arch-shape overflow-hidden border-[6px] sm:border-[8px] border-white shadow-[0_20px_50px_rgba(193,18,31,0.2)] bg-white group">
               <img
                 src="/z.jpg"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => { 
                   e.currentTarget.src = "https://images.unsplash.com/photo-1519225421980-715cb02151ff?auto=format&fit=crop&q=80&w=800&h=1000"; 
                   e.currentTarget.onerror = null; 
@@ -110,7 +129,7 @@ export const CeremonyDetails: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-            className="mt-10 sm:mt-14 bg-white/85 backdrop-blur-xl p-6 sm:p-10 shadow-[0_30px_60px_rgba(193,18,31,0.15)] rounded-2xl border border-white relative overflow-hidden"
+            className="mt-10 sm:mt-14 bg-white/85 p-6 sm:p-10 shadow-[0_30px_60px_rgba(193,18,31,0.15)] rounded-2xl border border-white relative overflow-hidden"
           >
             <div className="absolute inset-x-8 -top-px h-[2px] bg-gradient-to-r from-transparent via-brand-mocha/60 to-transparent" />
             <div className="relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">

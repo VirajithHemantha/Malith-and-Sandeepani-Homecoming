@@ -6,7 +6,7 @@ export const CoupleDetails: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
       {/* Decorative ambient background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-brand-gold/15 to-transparent rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-radial from-brand-gold/[0.06] to-transparent to-70% rounded-full pointer-events-none" />
 
       <div className="text-center mb-16 sm:mb-24 relative z-10">
         <motion.div
@@ -54,11 +54,13 @@ export const CoupleDetails: React.FC = () => {
           className="relative px-4 sm:px-0 order-1 lg:order-2 flex-shrink-0 group"
         >
           {/* Glowing border effect */}
-          <div className="absolute -inset-2 bg-gradient-to-b from-brand-gold/25 to-transparent rounded-[12rem_12rem_1rem_1rem] blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          <div className="absolute -inset-2 bg-gradient-to-b from-brand-gold/20 to-transparent rounded-[12rem_12rem_1.5rem_1.5rem] opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
           <div className="relative w-[300px] h-[400px] sm:w-[360px] sm:h-[500px] lg:w-[420px] lg:h-[580px] rounded-[12rem_12rem_16px_16px] overflow-hidden border-[6px] border-white ring-1 ring-brand-gold/40 shadow-[0_20px_50px_rgba(193,18,31,0.2)] bg-brand-champagne mx-auto z-10 transition-transform duration-700 group-hover:-translate-y-2">
             <img
               src="/y.jpg"
+              loading="lazy"
+              decoding="async"
               onError={(e) => {
                 e.currentTarget.src = "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800&h=1000";
                 e.currentTarget.onerror = null;
