@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Malith & Nipunika - Homecoming Celebration | 13 December 2026</title>
   <meta name="description" content="Join us for the homecoming celebration of Malith and Nipunika on 13 December 2026 at Devon Hotel, Ampitiya Road." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,16 @@
 
 <body>
   <div id="root"></div>
+  <script>
+    // Older iPhone Safari (< 15.4) lacks Object.hasOwn, which some libraries call
+    if (!Object.hasOwn) {
+      Object.defineProperty(Object, 'hasOwn', {
+        value: function (obj, key) { return Object.prototype.hasOwnProperty.call(obj, key); },
+        configurable: true,
+        writable: true
+      });
+    }
+  </script>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
