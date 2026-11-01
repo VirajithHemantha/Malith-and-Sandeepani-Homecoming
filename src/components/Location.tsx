@@ -10,7 +10,7 @@ export const Location: React.FC = () => {
   return (
     <div className="max-w-[85rem] mx-auto px-6 relative py-12">
       {/* Decorative Glows */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-radial from-brand-gold/[0.06] to-transparent to-70% pointer-events-none -z-10" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(closest-side,rgba(179,18,29,0.07),rgba(179,18,29,0))] pointer-events-none -z-10" />
 
       <div className="flex justify-center mt-10">
         
@@ -30,13 +30,13 @@ export const Location: React.FC = () => {
             <div className="mb-10 relative z-10 text-center flex flex-col items-center">
               <div className="inline-flex items-center justify-center gap-4 mb-6">
                 <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-brand-mocha/60" />
-                <span className="text-brand-mocha uppercase tracking-[0.5em] text-[10px] sm:text-[11px] font-bold drop-shadow-sm">
+                <span className="text-brand-mocha uppercase tracking-[0.5em] text-[10px] sm:text-[11px] font-bold">
                   The Venue
                 </span>
                 <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-brand-mocha/60" />
               </div>
 
-              <h2 className="text-5xl sm:text-6xl font-display text-brand-mocha mb-6 leading-tight drop-shadow-sm">
+              <h2 className="text-5xl sm:text-6xl font-display text-brand-mocha mb-6 leading-tight">
                 Where We <br />
                 <span className="italic font-light text-brand-gold">Celebrate</span>
               </h2>

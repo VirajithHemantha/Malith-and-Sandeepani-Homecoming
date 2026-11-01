@@ -6,7 +6,7 @@ export const CoupleDetails: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
       {/* Decorative ambient background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-radial from-brand-gold/[0.06] to-transparent to-70% rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(closest-side,rgba(179,18,29,0.07),rgba(179,18,29,0))] rounded-full pointer-events-none" />
 
       <div className="text-center mb-16 sm:mb-24 relative z-10">
         <motion.div
@@ -17,10 +17,10 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="inline-flex items-center gap-4 mb-6 mt-4">
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-brand-mocha/60" />
-            <span className="text-brand-mocha uppercase tracking-[0.5em] text-[11px] font-semibold font-sans drop-shadow-sm">The Couple</span>
+            <span className="text-brand-mocha uppercase tracking-[0.5em] text-[11px] font-semibold font-sans">The Couple</span>
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-brand-mocha/60" />
           </div>
-          <h2 className="text-5xl sm:text-7xl font-display text-brand-mocha tracking-tight drop-shadow-sm">
+          <h2 className="text-5xl sm:text-7xl font-display text-brand-mocha tracking-tight">
             <span className="text-red-foil">Malith</span> <span className="italic text-brand-gold font-light mx-2">&</span> <span className="text-red-foil">Nipunika</span>
           </h2>
         </motion.div>
@@ -37,7 +37,7 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-end">
             <span className="text-brand-mocha uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom</span>
-            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2 drop-shadow-sm">Malith</h3>
+            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2">Malith</h3>
             <p className="text-brand-sand/90 font-serif italic text-base sm:text-lg">Son of Mr. T. H. G. Dayananda<br />& Mrs. Nalani Vithanage</p>
           </div>
           <div className="hidden lg:flex justify-end mt-8">
@@ -70,12 +70,12 @@ export const CoupleDetails: React.FC = () => {
             />
             {/* Elegant inner shadow & overlay */}
             <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none" />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-crimson/20 to-transparent pointer-events-none mix-blend-overlay" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-crimson/20 to-transparent pointer-events-none" />
           </div>
 
           {/* Floating Sparkles decoration */}
-          <Sparkles className="absolute top-8 left-0 w-8 h-8 text-brand-gold animate-pulse drop-shadow-sm z-20" />
-          <Sparkles className="absolute bottom-10 -right-4 w-6 h-6 text-brand-gold animate-pulse delay-300 drop-shadow-sm z-20" />
+          <Sparkles className="absolute top-8 left-0 w-8 h-8 text-brand-gold animate-pulse z-20" />
+          <Sparkles className="absolute bottom-10 -right-4 w-6 h-6 text-brand-gold animate-pulse delay-300 z-20" />
         </motion.div>
 
         {/* Mobile divider between image and groom */}
@@ -93,7 +93,7 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-start">
             <span className="text-brand-mocha uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Bride</span>
-            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2 drop-shadow-sm">Nipunika</h3>
+            <h3 className="text-4xl sm:text-5xl font-display text-brand-mocha mb-2">Nipunika</h3>
             <p className="text-brand-gold font-display tracking-[0.3em] uppercase text-xs sm:text-sm mb-3">Gunawardhana</p>
             <p className="text-brand-sand/90 font-serif italic text-base sm:text-lg">Daughter of Mr. Priyantha Gunawardhana<br />& Mrs. Roshini Gunawardhana</p>
           </div>

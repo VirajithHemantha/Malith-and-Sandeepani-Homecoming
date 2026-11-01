@@ -10,16 +10,15 @@ export const Hero: React.FC = () => {
   const guestName = getGuestFromLocation();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 400]);
-  const scale = useTransform(scrollY, [0, 800], [1, 1.1]);
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
-    <div ref={containerRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-white/50">
+    <div ref={containerRef} className="relative min-h-screen supports-[height:100svh]:min-h-svh flex items-center justify-center overflow-hidden bg-white/50 pt-24 pb-36 sm:py-28">
 
       {/* Background Image with Parallax & Elegant Overlay */}
       <motion.div
         className="absolute inset-0 z-0 origin-center"
-        style={{ y: y1, scale }}
+        style={{ y: y1 }}
       >
         <img
           src="/x.jpg"
@@ -31,12 +30,12 @@ export const Hero: React.FC = () => {
         />
         {/* Soft elegant gradient overlays to ensure text readability & premium feel */}
         <div className="absolute inset-0 bg-gradient-to-t from-brand-ivory via-white/40 to-white/55" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-gold/10 via-transparent to-brand-gold/5 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-gold/10 via-transparent to-brand-gold/5" />
       </motion.div>
 
       {/* Luxury Border Frame */}
       <div className="absolute inset-6 border border-brand-gold/30 rounded-3xl pointer-events-none z-10 hidden sm:block " />
-      <div className="absolute inset-8 border-[0.5px] border-brand-gold/20 rounded-2xl pointer-events-none z-10 hidden sm:block mix-blend-overlay" />
+      <div className="absolute inset-8 border-[0.5px] border-brand-gold/20 rounded-2xl pointer-events-none z-10 hidden sm:block" />
 
       {/* Corner Ornaments */}
       <div className="absolute top-6 left-6 w-12 h-12 pointer-events-none z-10 hidden sm:block opacity-60">
@@ -71,7 +70,7 @@ export const Hero: React.FC = () => {
 
       {/* Main Content */}
       <motion.div
-        className="relative z-10 text-center px-4 sm:px-6 w-full max-w-6xl mt-10 sm:mt-20"
+        className="relative z-10 text-center px-4 sm:px-6 w-full max-w-6xl"
         style={{ opacity }}
       >
         <motion.div
@@ -87,15 +86,15 @@ export const Hero: React.FC = () => {
             <div className="h-[1px] w-12 sm:w-16 bg-gradient-to-r from-brand-gold/60 to-transparent" />
           </div>
 
-          <span className="text-brand-mocha uppercase tracking-[0.4em] sm:tracking-[0.6em] text-xs sm:text-sm font-medium mb-6 sm:mb-10 block drop-shadow-sm font-sans">
+          <span className="[text-shadow:0_1px_12px_rgba(255,255,255,0.9)] text-brand-mocha uppercase tracking-[0.4em] sm:tracking-[0.6em] text-xs sm:text-sm font-medium mb-6 sm:mb-10 block font-sans">
             Homecoming Celebration
           </span>
 
           <div className="relative mb-8 sm:mb-12 w-full flex justify-center">
             {/* Soft glow behind text for contrast and magical feel */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[140%] bg-radial from-white/70 via-white/30 to-transparent to-70% rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[140%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.85),rgba(255,255,255,0.4)_60%,rgba(255,255,255,0))] rounded-full pointer-events-none" />
 
-            <h1 className="relative text-6xl sm:text-[7rem] lg:text-[9.5rem] font-display text-brand-mocha leading-[1.1] sm:leading-[0.9] drop-shadow-sm">
+            <h1 className="relative text-6xl sm:text-[7rem] lg:text-[9.5rem] font-display text-brand-mocha leading-[1.1] sm:leading-[0.9]">
               <span className="text-red-foil">Malith</span> <br className="sm:hidden" />
               <span className="text-brand-gold italic font-light mx-2 sm:mx-6 text-5xl sm:text-[6rem] lg:text-[8rem] inline-block -translate-y-2 sm:-translate-y-6">&</span>
               <br className="sm:hidden" />
@@ -106,7 +105,7 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
             <div className="hidden sm:block h-[1px] w-20 bg-gradient-to-r from-transparent to-brand-gold/40" />
             {guestName ? (
-              <p className="text-[1.1rem] sm:text-2xl font-serif italic text-brand-mocha tracking-wide px-4 text-center max-w-xl leading-relaxed drop-shadow-[0_2px_4px_rgba(255,255,255,0.7)]">
+              <p className="text-[1.1rem] sm:text-2xl font-serif italic text-brand-mocha tracking-wide px-4 text-center max-w-xl leading-relaxed [text-shadow:0_1px_12px_rgba(255,255,255,0.9)]">
                 We cordially invite
                 <span className="block not-italic font-display text-2xl sm:text-4xl text-brand-gold my-2 sm:my-3 tracking-wide">
                   {guestName}
@@ -114,7 +113,7 @@ export const Hero: React.FC = () => {
                 to celebrate our special day with us
               </p>
             ) : (
-              <p className="text-[1.1rem] sm:text-2xl font-serif italic text-brand-mocha tracking-wide px-4 text-center max-w-xl leading-relaxed drop-shadow-[0_2px_4px_rgba(255,255,255,0.7)]">
+              <p className="text-[1.1rem] sm:text-2xl font-serif italic text-brand-mocha tracking-wide px-4 text-center max-w-xl leading-relaxed [text-shadow:0_1px_12px_rgba(255,255,255,0.9)]">
                 Together with our families, we joyfully invite you to celebrate our homecoming
               </p>
             )}
@@ -126,7 +125,7 @@ export const Hero: React.FC = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-brand-gold/40 via-brand-gold-light/40 to-brand-gold/40 rounded-full blur-[8px] opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 transform group-hover:scale-105" />
             <div className="relative px-4 sm:px-12 py-3 sm:py-5 bg-white/70 border border-brand-gold/50 rounded-full shadow-[0_8px_30px_rgba(193,18,31,0.15)] overflow-hidden whitespace-nowrap flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-b from-white/60 to-transparent pointer-events-none" />
-              <span className="relative text-[16px] sm:text-3xl font-serif text-brand-mocha tracking-[0.2em] sm:tracking-[0.4em] font-medium drop-shadow-sm flex items-center gap-2 sm:gap-3 whitespace-nowrap">
+              <span className="relative text-[16px] sm:text-3xl font-serif text-brand-mocha tracking-[0.2em] sm:tracking-[0.4em] font-medium flex items-center gap-2 sm:gap-3 whitespace-nowrap">
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-gold flex-shrink-0" />
                 13 . 12 . 2026
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-gold flex-shrink-0" />
@@ -156,13 +155,13 @@ export const Hero: React.FC = () => {
 
       {/* Refined Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 cursor-pointer"
+        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 cursor-pointer"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.5, duration: 1 }}
         whileHover={{ scale: 1.1 }}
       >
-        <span className="text-[9px] sm:text-[10px] font-sans uppercase tracking-[0.4em] text-brand-sand font-semibold drop-shadow-md">Discover</span>
+        <span className="text-[9px] sm:text-[10px] font-sans uppercase tracking-[0.4em] text-brand-sand font-semibold">Discover</span>
         <div className="w-[1px] h-12 sm:h-20 bg-gradient-to-b from-brand-gold/60 to-transparent animate-bounce" />
       </motion.div>
     </div>

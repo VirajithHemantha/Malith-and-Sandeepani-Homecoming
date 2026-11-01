@@ -20,6 +20,13 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
     if (finishedRef.current) return;
     finishedRef.current = true;
     timersRef.current.forEach((t) => window.clearTimeout(t));
+    // Release the decoded video before the invitation renders (frees memory on iPhones)
+    const video = videoRef.current;
+    if (video) {
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+    }
     onComplete();
   }, [onComplete]);
 

@@ -50,7 +50,7 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
           
           <div className="relative pt-10 pb-8 px-4 flex flex-col items-center w-full z-10 transition-transform duration-700 group-hover:-translate-y-3">
             {/* Elegant number */}
-            <span className="text-5xl sm:text-6xl lg:text-7xl font-display font-medium text-brand-mocha mb-4 drop-shadow-[0_2px_4px_rgba(193,18,31,0.3)] tabular-nums tracking-wide">
+            <span className="text-5xl sm:text-6xl lg:text-7xl font-display font-medium text-brand-mocha mb-4 tabular-nums tracking-wide">
               {String(item.value).padStart(2, '0')}
             </span>
             {/* Divider line */}

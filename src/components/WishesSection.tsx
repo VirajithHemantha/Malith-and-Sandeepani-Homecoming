@@ -71,14 +71,14 @@ export const WishesSection: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 relative py-12">
       {/* Background ambient glow */}
-      <div className="absolute top-0 right-1/4 w-3/4 h-3/4 bg-radial from-brand-gold/[0.06] to-transparent to-70% rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-0 right-1/4 w-3/4 h-3/4 bg-[radial-gradient(closest-side,rgba(179,18,29,0.07),rgba(179,18,29,0))] rounded-full pointer-events-none -z-10" />
 
       <div className="text-center mb-16 relative">
         <Sparkles className="absolute -top-8 left-1/2 -translate-x-1/2 w-8 h-8 text-brand-gold/40 animate-pulse" />
-        <span className="text-brand-mocha uppercase tracking-[0.5em] text-[10px] font-bold mb-4 block drop-shadow-sm">
+        <span className="text-brand-mocha uppercase tracking-[0.5em] text-[10px] font-bold mb-4 block">
           Guestbook
         </span>
-        <h2 className="text-5xl sm:text-7xl font-display text-brand-mocha tracking-tight drop-shadow-sm">
+        <h2 className="text-5xl sm:text-7xl font-display text-brand-mocha tracking-tight">
           Blessings & <span className="italic font-light text-brand-gold">Wishes</span>
         </h2>
         <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-brand-gold/60 to-transparent mx-auto mt-8" />

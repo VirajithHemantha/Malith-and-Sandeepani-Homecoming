@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
 const COLORS = ['#8b0000', '#b3121d', '#d42a35', '#141111'];
-const PETAL_COUNT = 14;
+const PETAL_COUNT = 10;
 
 // Petals fall with a GPU-only CSS transform animation, so they never trigger
 // layout or repaint while the page scrolls.

@@ -48,7 +48,7 @@ export const RSVPForm: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-6 relative py-4">
       {/* Premium ambient backdrop & glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-radial from-brand-gold/[0.06] to-transparent to-70% rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(closest-side,rgba(179,18,29,0.07),rgba(179,18,29,0))] rounded-full pointer-events-none -z-10" />
 
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
@@ -65,13 +65,13 @@ export const RSVPForm: React.FC = () => {
           <Sparkles className="absolute -top-6 -left-6 w-12 h-12 text-brand-gold/30 animate-pulse" />
           
           <div className="inline-flex items-center justify-center lg:justify-start gap-4 mb-6">
-            <span className="text-brand-mocha uppercase tracking-[0.5em] text-[10px] sm:text-[11px] font-bold drop-shadow-sm">
+            <span className="text-brand-mocha uppercase tracking-[0.5em] text-[10px] sm:text-[11px] font-bold">
               Kindly Respond
             </span>
             <div className="hidden lg:block w-16 h-[1px] bg-gradient-to-r from-brand-mocha/60 to-transparent" />
           </div>
 
-          <h2 className="text-5xl sm:text-6xl font-display text-brand-mocha tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
+          <h2 className="text-5xl sm:text-6xl font-display text-brand-mocha tracking-tight leading-[1.1] mb-6">
             Reserve <span className="italic font-light text-brand-gold">Your</span> Seat
           </h2>
           
@@ -96,7 +96,7 @@ export const RSVPForm: React.FC = () => {
                 <div className="w-24 h-24 bg-brand-gold/15 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border border-brand-gold/40">
                   <CheckCircle className="w-12 h-12 text-brand-gold-light" />
                 </div>
-                <h3 className="text-4xl font-display text-brand-mocha mb-4 tracking-tight drop-shadow-sm">With Gratitude</h3>
+                <h3 className="text-4xl font-display text-brand-mocha mb-4 tracking-tight">With Gratitude</h3>
                 <p className="text-brand-sand/90 leading-relaxed font-serif text-lg mb-8">
                   {lastAttendance === ATTENDING
                     ? 'Your response has been warmly received. We cannot wait to celebrate with you!'
@@ -178,7 +178,7 @@ export const RSVPForm: React.FC = () => {
                         <option value="5">5 Guests</option>
                       </select>
                       <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-brand-gold transition-transform duration-300 group-hover:scale-110">
-                        <Heart className="w-5 h-5 fill-brand-gold/30 drop-shadow-sm" />
+                        <Heart className="w-5 h-5 fill-brand-gold/30" />
                       </div>
                     </div>
                   </div>

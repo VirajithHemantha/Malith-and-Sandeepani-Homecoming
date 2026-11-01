@@ -13,6 +13,7 @@ import { Countdown } from './components/Countdown';
 import { RSVPForm } from './components/RSVPForm';
 import { WishesSection } from './components/WishesSection';
 import { DecorativeDivider } from './components/DecorativeDivider';
+import { SafeSection } from './components/SafeSection';
 
 export default function App() {
   const [showInvitation, setShowInvitation] = useState(false);
@@ -78,29 +79,29 @@ export default function App() {
         {isMusicPlaying ? <Music className="w-5 h-5 sm:w-6 sm:h-6" /> : <VolumeX className="w-5 h-5 sm:w-6 sm:h-6" />}
       </motion.button>
 
-      <Hero />
+      <SafeSection><Hero /></SafeSection>
       <DecorativeDivider />
       
       <div className="py-8 sm:py-12 bg-gradient-to-b from-white/90 via-brand-champagne/90 to-white/90 relative inner-border-gold m-4 sm:m-8 rounded-[2rem]">
-        <CoupleDetails />
+        <SafeSection><CoupleDetails /></SafeSection>
       </div>
 
       <DecorativeDivider />
 
       <div className="py-8 sm:py-12 bg-white/80 relative">
-        <CeremonyDetails />
+        <SafeSection><CeremonyDetails /></SafeSection>
       </div>
 
       <DecorativeDivider />
 
       <div className="py-8 sm:py-12 bg-gradient-to-b from-white/80 via-brand-champagne/90 to-white/80 relative inner-border-gold m-4 sm:m-8 rounded-[2rem]">
-        <Location />
+        <SafeSection><Location /></SafeSection>
       </div>
 
       <DecorativeDivider />
 
       <div className="py-8 sm:py-12 bg-white/80 relative">
-        <Timeline />
+        <SafeSection><Timeline /></SafeSection>
       </div>
 
       <DecorativeDivider />
@@ -111,28 +112,28 @@ export default function App() {
           <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
           <div className="max-w-6xl mx-auto px-6 mb-12 text-center relative">
-            <span className="text-white/90 uppercase tracking-[0.4em] text-[10px] sm:text-[11px] font-bold drop-shadow-sm">
+            <span className="text-white/90 uppercase tracking-[0.4em] text-[10px] sm:text-[11px] font-bold">
               The Wait Is Almost Over
             </span>
           </div>
-          <Countdown targetDate={weddingDate} />
+          <SafeSection><Countdown targetDate={weddingDate} /></SafeSection>
       </div>
 
       <DecorativeDivider />
 
       <div className="py-8 sm:py-12 bg-brand-champagne/90 relative inner-border-gold m-4 sm:m-8 rounded-[2rem]">
-        <RSVPForm />
+        <SafeSection><RSVPForm /></SafeSection>
       </div>
 
       <DecorativeDivider />
 
       <div className="py-8 sm:py-12 bg-gradient-to-b from-brand-champagne/80 to-white/90 relative">
-        <WishesSection />
+        <SafeSection><WishesSection /></SafeSection>
       </div>
 
       {/* Elegant Footer Signature */}
       <footer className="py-12 bg-brand-black border-t-2 border-brand-gold text-center relative overflow-hidden mt-6">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-radial from-brand-gold/25 to-transparent to-70% rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[radial-gradient(closest-side,rgba(179,18,29,0.25),rgba(179,18,29,0))] rounded-full pointer-events-none" />
         <Heart className="w-6 h-6 mx-auto mb-6 text-brand-gold-light fill-brand-gold/40" />
         <p className="font-display text-4xl sm:text-5xl mb-2"><span className="text-white">Malith</span> <span className="text-brand-gold-light italic">&</span> <span className="text-white">Nipunika</span></p>
         <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-white/60 font-semibold block mb-8">

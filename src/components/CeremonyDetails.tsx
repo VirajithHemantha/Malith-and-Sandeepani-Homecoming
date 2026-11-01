@@ -13,7 +13,7 @@ export const CeremonyDetails: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
       {/* Premium ambient backdrop */}
-      <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-radial from-brand-gold/[0.06] to-transparent to-70% rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-[radial-gradient(closest-side,rgba(179,18,29,0.07),rgba(179,18,29,0))] rounded-full pointer-events-none" />
       
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         {/* Left Side: Text Content */}
@@ -25,13 +25,13 @@ export const CeremonyDetails: React.FC = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <div className="inline-flex items-center gap-4 mb-6">
-              <span className="text-brand-mocha uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[10px] sm:text-[11px] font-bold drop-shadow-sm">
+              <span className="text-brand-mocha uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[10px] sm:text-[11px] font-bold">
                 The Homecoming
               </span>
               <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-brand-mocha/60 to-transparent" />
             </div>
             
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display text-brand-mocha mb-8 leading-[1.1] drop-shadow-sm">
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display text-brand-mocha mb-8 leading-[1.1]">
               Welcoming Us <br />
               <span className="italic font-light text-brand-gold">Home Together</span>
             </h2>
@@ -115,7 +115,7 @@ export const CeremonyDetails: React.FC = () => {
                 alt="Ceremony Venue"
                 className="w-full h-full object-cover scale-[1.2] lg:scale-[1.15] object-[center_30%] transition-transform duration-[2s] ease-out group-hover:scale-[1.25] lg:group-hover:scale-[1.2]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/5 pointer-events-none mix-blend-overlay opacity-opacity-70 group-hover:opacity-100 transition-opacity duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/5 pointer-events-none opacity-opacity-70 group-hover:opacity-100 transition-opacity duration-1000" />
             </div>
 
             {/* Decorative Floating Circles */}
@@ -134,7 +134,7 @@ export const CeremonyDetails: React.FC = () => {
             <div className="absolute inset-x-8 -top-px h-[2px] bg-gradient-to-r from-transparent via-brand-mocha/60 to-transparent" />
             <div className="relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
               <div className="flex items-center gap-3">
-                <Heart className="text-brand-mocha w-8 h-8 sm:w-10 sm:h-10 fill-brand-gold/20 drop-shadow-sm flex-shrink-0" />
+                <Heart className="text-brand-mocha w-8 h-8 sm:w-10 sm:h-10 fill-brand-gold/20 flex-shrink-0" />
                 <Sparkles className="w-4 h-4 text-brand-gold animate-pulse flex-shrink-0" />
               </div>
               <div className="flex-1">
@@ -144,7 +144,7 @@ export const CeremonyDetails: React.FC = () => {
                 </p>
               </div>
               <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-brand-champagne rounded-full border border-brand-gold/30 shadow-sm self-start sm:self-center flex-shrink-0">
-                <span className="text-brand-mocha font-sans font-bold tracking-[0.1em] sm:tracking-[0.2em] text-[9px] sm:text-[11px] uppercase block drop-shadow-sm">12:30 PM Onwards</span>
+                <span className="text-brand-mocha font-sans font-bold tracking-[0.1em] sm:tracking-[0.2em] text-[9px] sm:text-[11px] uppercase block">12:30 PM Onwards</span>
               </div>
             </div>
           </motion.div>
